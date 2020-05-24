@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Noobtastic chatroom</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<div>
+<h3>Signup Function</h3>
+  <pre>
+Auth.signup({
+  username: 'songz',
+  email: 'song@zheng.club',
+  password: 'helpless',
+  name: 'aouo oauu',
+  age: 942,
+  //any other key-value pairs...
+})
+  </pre>
+
+<h3>Login Function</h3>
+  <pre>
+Auth.login({
+  username: 'songz',
+  password: 'helpless',
+})
+  </pre>
+
+<h3>Session Function</h3>
+  <pre>
+Auth.getSession().then( user => {
+  console.log('User is', user)
+})
+  </pre>
+
+<h3>Logout Function</h3>
+  <pre>
+// Logout, then get session should be empty
+Auth.logout().then(e => console.log(e))
+  </pre>
+<script src="auth.js"></script>
+</body>
+</html>
+
+
